@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: azure;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    text-align: center;
+}
+
+.greetings {
+    font-size: 6rem;
+    font-weight: 900;
+    display: flex;
+    gap: 40px; /* Menambahkan jarak antar "HAPPY" dan "BIRTHDAY" */
+}
+
+/* Kata HAPPY dengan animasi glow */
+.happy span {
+    animation: glow 2.5s ease-in-out infinite;
+    display: inline-block;
+}
+
+/* Kata BIRTHDAY dengan animasi glow */
+.birthday span {
+    animation: glow 2.5s ease-in-out infinite;
+    display: inline-block;
+}
+
+/* Animasi glow */
+@keyframes glow {
+    0%, 100% {
+        color: #fff;
+        text-shadow: 0 0 12px #39c6d6, 0 0 50px #39c6d6, 0 0 100px #39c6d6;
+    }
+    10%, 90% {
+        color: #111;
+        text-shadow: none;
+    }
+}
+
+/* Mengatur delay animasi glow untuk kata HAPPY */
+.happy span:nth-child(1) { animation-delay: 0s; }
+.happy span:nth-child(2) { animation-delay: 0.1s; }
+.happy span:nth-child(3) { animation-delay: 0.2s; }
+.happy span:nth-child(4) { animation-delay: 0.3s; }
+.happy span:nth-child(5) { animation-delay: 0.4s; }
+
+/* Mengatur delay animasi glow untuk kata BIRTHDAY */
+.birthday span:nth-child(1) { animation-delay: 0.5s; }
+.birthday span:nth-child(2) { animation-delay: 0.6s; }
+.birthday span:nth-child(3) { animation-delay: 0.7s; }
+.birthday span:nth-child(4) { animation-delay: 0.8s; }
+.birthday span:nth-child(5) { animation-delay: 0.9s; }
+.birthday span:nth-child(6) { animation-delay: 1s; }
+.birthday span:nth-child(7) { animation-delay: 1.1s; }
+.birthday span:nth-child(8) { animation-delay: 1.2s; }
+
+/* Animasi untuk Nama RAIHAN dengan efek glow yang sama */
+.name {
+    font-size: 6rem; /* Sama dengan ukuran font HAPPY BIRTHDAY */
+    font-weight: 900; /* Sama dengan font-weight HAPPY BIRTHDAY */
+    margin-top: 20px; /* Memberikan jarak antara BIRTHDAY dan RAIHAN */
+    display: flex;
+    gap: 10px;
+}
+
+/* Animasi glow untuk nama RAIHAN */
+.name span {
+    animation: glow 2.5s ease-in-out infinite;
+    display: inline-block;
+}
+
+/* Menambahkan delay berbeda untuk setiap huruf di RAIHAN */
+.name span:nth-child(1) { animation-delay: 0.2s; }
+.name span:nth-child(2) { animation-delay: 0.4s; }
+.name span:nth-child(3) { animation-delay: 0.6s; }
+.name span:nth-child(4) { animation-delay: 0.8s; }
+.name span:nth-child(5) { animation-delay: 1s; }
+.name span:nth-child(6) { animation-delay: 1.2s; }
+
+.description {
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+.button a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #111;
+    padding: 10px 20px; /* Padding lebih besar untuk tampilan yang lebih baik */
+    background-color: #39c6d6;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    border: none; /* Menghilangkan border default */
+    outline: none; /* Menghilangkan outline yang muncul saat tombol difokuskan */
+    box-shadow: none; /* Menghilangkan shadow saat difokuskan */
+}
+
+.button a:hover {
+    background-color: #028e9b;
+}
+
+/* Menghilangkan outline saat tombol difokuskan */
+.button a:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
+/* Responsivitas untuk tampilan kecil */
+@media screen and (max-width: 574px) {
+    .greetings {
+        display: block;
+        font-size: 3rem;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .description {
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+
+    .button a {
+        font-size: 0.8rem;
+        padding: 8px 16px;
+    }
+}
